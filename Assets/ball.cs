@@ -5,11 +5,14 @@ using UnityEngine;
 public class ball : MonoBehaviour
 {
     public GameObject tama;
-    public tamaka t;
+    public GameObject t;
+    tamaka script;
     // Start is called before the first frame update
     void Start()
     {
         tama = gameObject;
+        t = GameObject.Find ("GameObject");
+        script = t.GetComponent<tamaka>(); 
     }
 
     // Update is called once per frame
@@ -21,7 +24,8 @@ public class ball : MonoBehaviour
     {
         if (collider.gameObject.tag == "atarikabe")
         {
-            t.tamakazu += 5;
+            script.tamakazu += 5;
+            Debug.Log("a");
             Destroy(gameObject);
         }
         if (collider.gameObject.tag == "kabe")

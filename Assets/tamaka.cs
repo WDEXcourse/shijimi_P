@@ -18,7 +18,7 @@ public class tamaka : MonoBehaviour
     void Update()
     {
         Text tamakazu_text = tamakazu_Object.GetComponent<Text> ();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             if (tamakazu >= 1)
             {
